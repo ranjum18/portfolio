@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Personal portfolio showcasing projects, skills and contact information." />
+
+  <!-- Simple styles (embedded so it's a single file). Edit or replace with your own CSS. -->
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4; --glass: rgba(255,255,255,0.03);
+      --max-width:1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:linear-gradient(180deg,#071028 0%,var(--bg) 100%); color:#e6eef6}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav a{margin-left:18px;font-weight:600;color:var(--muted)}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;padding:36px 0}
+    .hero-text h1{font-size:34px;margin:0 0 8px}
+    .hero-text p{margin:0 0 18px;color:var(--muted);line-height:1.5}
+    .cta{display:flex;gap:12px}
+    button{background:var(--accent);border:0;padding:10px 14px;border-radius:8px;color:#042124;font-weight:700;cursor:pointer}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(2,6,23,0.6);}
+    .profile{display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center}
+    .avatar{width:160px;height:160px;border-radius:14px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-size:48px}
+    section{padding:28px 0}
+    h2{margin:0 0 12px}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .project{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02)}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:600;color:var(--muted)}
+    footer{padding:24px 0;color:var(--muted);text-align:center}
+    form{display:flex;flex-direction:column;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.logo{width:40px;height:40px}.avatar{width:140px;height:140px}.container{padding:16px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">YN</div>
+        <div>
+          <div style="font-weight:800">Your Name</div>
+          <div style="font-size:13px;color:var(--muted)">Frontend engineer • Designer • Student</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Hi — I'm <span style="color:var(--accent)">Your Name</span>.</h1>
+          <p>I build delightful interfaces and simple user-first products. I'm currently available for internships & freelance projects.</p>
+          <div class="cta">
+            <a href="#contact"><button>Contact Me</button></a>
+            <a href="#projects"><button style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)">View Projects</button></a>
+          </div>
+        </div>
+
+        <aside class="card profile">
+          <div class="avatar">YN</div>
+          <div style="font-weight:700">Your Name</div>
+          <div style="font-size:13px;color:var(--muted)">Location • Role</div>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+          </div>
+        </aside>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+          <article class="project card">
+            <h3>Project One</h3>
+            <p style="color:var(--muted);font-size:14px">Short description — what it does, tech used, and your role.</p>
+            <p style="margin-top:8px"><a href="#">Live</a> · <a href="#">Source</a></p>
+          </article>
+
+          <article class="project card">
+            <h3>Project Two</h3>
+            <p style="color:var(--muted);font-size:14px">Short description — what it does, tech used, and your role.</p>
+            <p style="margin-top:8px"><a href="#">Live</a> · <a href="#">Source</a></p>
+          </article>
+
+          <article class="project card">
+            <h3>Project Three</h3>
+            <p style="color:var(--muted);font-size:14px">Short description — what it does, tech used, and your role.</p>
+            <p style="margin-top:8px"><a href="#">Live</a> · <a href="#">Source</a></p>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills card" style="padding:12px">
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">React</span>
+          <span class="skill">Node.js</span>
+          <span class="skill">Figma</span>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="card" style="display:grid;grid-template-columns:1fr 360px;gap:18px">
+          <div>
+            <form id="contactForm">
+              <input id="name" placeholder="Your name" required />
+              <input id="email" placeholder="you@example.com" type="email" required />
+              <textarea id="message" rows="6" placeholder="Message" required></textarea>
+              <button type="submit">Send message</button>
+              <div id="formMsg" style="color:var(--muted);font-size:13px;margin-top:8px"></div>
+            </form>
+          </div>
+
+          <aside style="padding:12px">
+            <strong>Location</strong>
+            <p style="color:var(--muted)">City, Country</p>
+            <strong>Availability</strong>
+            <p style="color:var(--muted)">Open to internships & freelance</p>
+          </aside>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <small>© <span id="year"></span> Your Name — Built with ♥</small>
+    </footer>
+  </div>
+
+  <script>
+    // small JS helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if(href.startsWith('#')){
+          e.preventDefault();
+          const el = document.querySelector(href);
+          if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      })
+    })
+
+    // Basic contact form handler (demo only). Replace with real backend or Formspree/GitHub forms.
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const msg = document.getElementById('formMsg');
+      if(!name || !email || !message){ msg.textContent = 'Please fill out all fields.'; return; }
+      msg.textContent = 'Thanks — message received (demo only).';
+      this.reset();
+    })
+  </script>
+</body>
+</html>
